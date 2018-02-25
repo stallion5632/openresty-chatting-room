@@ -2,6 +2,7 @@
 local server = require "resty.websocket.server"
 local redis = require "resty.redis"
 
+local uri = ngx.var.uri
 --获取聊天室id
 local len = string.len('/s/')
 local channel_id = string.sub(uri,len+1,-1)
